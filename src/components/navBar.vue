@@ -1,44 +1,61 @@
 <script>
 export default {
-
+  data() {
+    return {
+      menus: ["Home", "Skills", "Achivements", "Contacts"],
+    }
+  },
 }
 </script>
 
 <template>
   <div>
-    <nav class="bg-white dark:bg-gray-800 shadow-md items-center py-4">
-      <!-- Hamburger button start -->
-      <button
-        class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 md:hidden ml-2"
-        type="button" data-te-collapse-init data-te-target="#navbarSupportedContent2"
-        aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="[&>svg]:w-7">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
-            <path fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-              clip-rule="evenodd" />
-          </svg>
-        </span>
-      </button>
-      <!-- Hamburger button end -->
-      <div class="hidden md:flex md:flex-wrap md:justify-around mx-auto sm:mx-0 p-4">
-        <div>
-          <ul class="list-style-none flex flex-row space-x-4">
-            <li class="text-gray-800 dark:text-white">
-              <a href="#">Home</a>
-            </li>
-            <li class="text-gray-800 dark:text-white">
-              <a href="#">Skills</a>
-            </li>
-            <li class="text-gray-800 dark:text-white">
-              <a href="#">Achievements</a>
-            </li>
-            <li class="text-gray-800 dark:text-white">
-              <a href="#">Contacts</a>
-            </li>
+    <!-- navBar start-->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>{{ menus[0] }}</a></li>
+            <li><a href="#">{{ menus[1] }}</a></li>
+            <li><a>{{ menus[2] }}</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>{{ menus[0] }}</a></li>
+          <li><a href="#">{{ menus[1] }}</a></li>
+          <li><a>{{ menus[2] }}</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <div class="ml-2 mr-4">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-sm m-1">
+              Theme
+              <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+              <li><input type="radio" name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Light"
+                  value="light" /></li>
+              <li><input type="radio" name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dark" value="dark" />
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-sm">{{ menus[3] }}</a>
+        </div>
+      </div>
+    </div>
+    <!-- navBar end -->
   </div>
 </template>
