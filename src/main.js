@@ -7,7 +7,8 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import { FaAndroid } from "oh-vue-icons/icons";
 import { FaLinux } from "oh-vue-icons/icons";
 import { FaPalette } from "oh-vue-icons/icons";
+import { CoFlutter } from "oh-vue-icons/icons";
 
-addIcons(FaAndroid, FaLinux, FaPalette);
+addIcons(FaAndroid, FaLinux, FaPalette, CoFlutter);
 
 createApp(App).component('v-icon', OhVueIcon).mount('#app')

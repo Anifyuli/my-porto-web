@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      menus: ["Home", "Skills", "Achivements", "Contacts"],
+      menus: ["Home", "Skills", "Achivements"],
     }
   },
 }
@@ -52,7 +52,6 @@ export default {
               </li>
             </ul>
           </div>
-          <a class="btn btn-sm">{{ menus[3] }}</a>
         </div>
       </div>
     </div>

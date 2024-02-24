@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="card w-40 bg-base-100 shadow-xl px-4 py-3">
+  <div class="card w-80 bg-base-100 mx-10">
     <div class="card-title flex flex-col place-items-center">
       <v-icon :name="iconName" scale="4" />
       <p>{{ text }}</p>

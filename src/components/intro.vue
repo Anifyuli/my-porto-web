@@ -16,7 +16,8 @@ export default {
         <h1 class="font-bold text-2xl mt-3">Welcome to my profile!</h1>
         <h3 class="font-normal text-xl">My name is {{ name }}</h3>
         <h3 class="font-normal text-xl">A software developer & open source enthusiast</h3>
-        <button class="btn btn-md btn-primary mt-2">Let's go!</button>
+        <a href="./assets/docs/mycv.pdf" download="cv.pdf"><button class="btn btn-md btn-primary mt-2">Save my
+            CV</button></a>
       </div>
       <div class="grid h-fit basis-1/3 card rounded-box place-items-center w-screen mx-10">
         <img src="./assets/img/profile.jpg" alt="" class="size-60 mask mask-circle">
